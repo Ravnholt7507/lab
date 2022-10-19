@@ -7,8 +7,13 @@ root.withdraw()
 
 file_path = askdirectory(title="select folder")
 
-poppercommand = "python3 popper.py"
+poppercommand = "python3 popper.py -q"
 
-outputfile = "> popperoutput.txt"
+outputfile = ">> popperoutput.txt"
 
-os.system(poppercommand+" "+file_path+" "+outputfile)
+for foldername in os.listdir(file_path):
+        f = os.path.join(file_path, foldername)
+        if foldername ==".DS_Store":
+                continue
+
+        os.system(poppercommand + " " + f + "/100" + " " + outputfile)
