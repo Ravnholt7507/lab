@@ -150,10 +150,10 @@ def print_prog_score(prog, score):
     recall = 'n/a'
     if (tp+fn) > 0:
         recall = f'{tp / (tp+fn):0.2f}'
-    print('*'*10 + ' SOLUTION ' + '*'*10)
+
     print(f'Precision:{precision} Recall:{recall} TP:{tp} FN:{fn} TN:{tn} FP:{fp} Size:{size}')
     print(format_prog(order_prog(prog)))
-    print('*'*30)
+
 
 def prog_size(prog):
     return sum(rule_size(rule) for rule in prog)
