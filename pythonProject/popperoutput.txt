@@ -1,0 +1,21 @@
+unload:
+NO SOLUTION
+load:
+NO SOLUTION
+drop:
+Precision:1.00 Recall:0.01 TP:1 FN:155 TN:3644 FP:0 Size:6
+drop(A,B,C,D,E):- init_on(F,C,E),init_on(B,F,E),goal_on(B,C,E),init_at(A,D,E),goal_on(F,B,E).
+drive:
+NO SOLUTION
+lift:
+Precision:1.00 Recall:0.67 TP:114 FN:55 TN:4951 FP:0 Size:59
+lift(A,B,C,D,E):- goal_on(C,B,E),init_available(A,E),init_at(B,D,E),init_on(B,C,E).
+lift(A,B,C,D,E):- init_available(A,E),init_on(C,F,E),init_at(F,D,E),init_on(B,C,E),goal_on(F,C,E).
+lift(A,B,C,D,E):- goal_on(F,C,E),init_on(B,C,E),init_available(A,E),init_at(F,D,E),init_on(F,B,E).
+lift(A,B,C,D,E):- init_on(B,C,E),init_available(A,E),init_at(F,D,E),init_on(C,F,E),goal_on(B,F,E).
+lift(A,B,C,D,E):- init_on(B,C,E),goal_on(B,F,E),init_clear(F,E),init_available(A,E),init_at(B,D,E).
+lift(A,B,C,D,E):- init_clear(F,E),init_at(B,D,E),init_on(B,C,E),init_available(A,E),goal_on(C,F,E).
+lift(A,B,C,D,E):- init_on(B,C,E),goal_on(F,C,E),init_at(C,D,E),init_available(A,E),goal_on(B,F,E).
+lift(A,B,C,D,E):- init_on(B,C,E),goal_on(F,B,E),init_at(F,D,E),init_available(A,E),init_on(C,F,E).
+lift(A,B,C,D,E):- init_at(C,D,E),init_on(B,C,E),goal_on(C,F,E),init_available(A,E),goal_on(F,B,E).
+lift(A,B,C,D,E):- init_available(A,E),init_at(F,D,E),init_on(F,B,E),init_on(B,C,E),goal_on(B,F,E).

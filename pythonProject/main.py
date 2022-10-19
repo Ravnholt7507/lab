@@ -11,15 +11,18 @@ poppercommand = "python3 popper.py"
 
 outputfile = ">> popperoutput.txt"
 
-with open('popperoutput.txt', 'w') as ofile:
-        ofile.write('')
 
-for foldername in os.listdir(file_path):
-        f = os.path.join(file_path, foldername)
-        if foldername ==".DS_Store":
-                continue
+if file_path != '':
+    with open('popperoutput.txt', 'w') as ofile:
+        ofile.write('')
+    for current_folder in os.listdir(file_path):
+        f = os.path.join(file_path, current_folder)
+        if current_folder == ".DS_Store":
+            continue
         with open('popperoutput.txt', 'a') as ofile:
-                ofile.write(foldername+":")
-                ofile.write('\n')
+            ofile.write(current_folder + ":")
+            ofile.write('\n')
 
         os.system(poppercommand + " " + f + "/100" + " " + outputfile)
+else:
+    print("Error: Please select a folder")
