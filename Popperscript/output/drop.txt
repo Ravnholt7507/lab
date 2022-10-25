@@ -1,0 +1,1 @@
+drop(A,B,C,D,E):- init_on(F,C,E),init_at(B,D,E),init_available(A,E),goal_on(B,C,E),goal_on(F,B,E).
