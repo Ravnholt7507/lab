@@ -8,7 +8,5 @@ if __name__ == '__main__':
     prog, score, stats = learn_solution(settings)
     if prog != None:
         print_prog_score(prog, score)
-    else:
-        print('NO SOLUTION')
     if settings.show_stats:
         stats.show()

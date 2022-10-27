@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e98711e-ca6d-4706-a425-4beb5dcf3f03" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Popperscript/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Popperscript/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Popperscript/popperoutput.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666855585330</updated>
       <workItem from="1666855586974" duration="7000" />
-      <workItem from="1666856489014" duration="1721000" />
+      <workItem from="1666856489014" duration="2340000" />
     </task>
     <servers />
   </component>
