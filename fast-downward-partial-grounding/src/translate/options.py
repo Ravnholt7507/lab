@@ -64,6 +64,9 @@ def parse_args():
     argparser.add_argument(
         "--termination-condition", type=str, default=["default"], nargs="+", # at least one argument must be given
         help="the termination condition, which may be followed by additional arguments used by the respective condition")
+    argparser.add_argument(
+        "--hard-rules", type=str, nargs=2,
+        help="type of hard rule evaluator and file that contains the rules.")
 
     return argparser.parse_args()
 

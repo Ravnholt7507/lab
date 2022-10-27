@@ -4,9 +4,11 @@
 import sys
 import itertools
 
+import options
 import pddl
 import subdominization.priority_queue as pq
 import subdominization.termination_condition as tc
+import subdominization.hard_rules as hr
 import timers
 from functools import reduce
 
@@ -284,7 +286,10 @@ class Queue:
         self.enqueued = {(atom.predicate,) + tuple(atom.args)
                          for atom in self.queue}
         self.num_pushes = len(atoms)
-        self.action_queue = pq.get_action_queue_from_options(task)
+        if options.hard_rules:
+            self.action_queue = hr.get_hard_rules_from_options(pq.get_action_queue_from_options(task))
+        else:
+            self.action_queue = pq.get_action_queue_from_options(task)
         self.popped_actions = 0
     def __bool__(self):
         return self.queue_pos < len(self.queue)
@@ -326,19 +331,19 @@ def compute_model(prog, task = None):
         # unifier.dump()
         fact_atoms = sorted(fact.atom for fact in prog.facts)
         queue = Queue(fact_atoms, task)
-        
+
     print("Generated %d rules." % len(rules))
-        
+
     queue.print_info()
     termination_condition = tc.get_termination_condition_from_options()
     termination_condition.print_info()
-    
+
     with timers.timing("Computing model"):
         relevant_atoms = 0
         auxiliary_atoms = 0
         goal_reached = False
         while queue or (queue.has_actions() and not termination_condition.terminate()):
-            next_atom = queue.pop()  
+            next_atom = queue.pop()
             pred = next_atom.predicate
             if isinstance(pred, str) and "$" in pred:
                 auxiliary_atoms += 1
