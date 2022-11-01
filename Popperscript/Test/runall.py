@@ -81,7 +81,7 @@ for foldername in os.listdir(file_path):
         output.write(foldername)
         output.write(',')
         if percent == True:
-            output.write(strargs + ' ' + percent_amount)
+            output.write(strargs + ' --percent ' + percent_amount)
         if percent == False:
             output.write(strargs)
         output.write(',')
