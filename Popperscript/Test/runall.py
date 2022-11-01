@@ -2,6 +2,7 @@ import os
 import time
 import pathlib
 import sys
+import math
 
 args = sys.argv
 args.pop(0)
@@ -16,16 +17,43 @@ args.pop(0)
 #--debug (default: false)
 #--stats (default: false)
 
-file_path =  '/Users/minmacbook/Documents/Popper-main/domainfiles/depots'
-#file_path =  '/home/rune/Desktop/domainfiles/blocksworld'
+#file_path =  '/Users/minmacbook/Documents/Popper-main/domainfiles/depots'
+file_path =  '/Users/minmacbook/Documents/Popper-main/domainfiles/blocksworld'
 #file_path =  '/home/rune/Desktop/domainfiles/caldera'
-
 
 poppercommand = "python3 popper.py -q"
 
 outputfile = ">> output.txt"
 
 currentLine = 0
+
+directories = []
+
+num_lines = [[],[]]
+
+percent = False
+
+def func(percent):
+    os.walk(file_path)
+
+    for subfolders in os.listdir(file_path):
+        path = file_path+'/'+subfolders+'/100/exs.pl'
+        directories.append(path)
+
+    for x in directories:
+        amount = math.floor(int((sum(1 for line in open(x)))*float(percent)))
+        num_lines[0].append(str(x))
+        num_lines[1].append(str(amount))
+
+for x in args:
+    if x == '--percent':
+        func(args[1])
+        args.pop(0)
+        args.pop(0)
+        percent = True
+        args.append('--max-examples')
+
+#print(num_lines)
 
 strargs = " ".join(str(x) for x in args)
 
@@ -53,8 +81,15 @@ for foldername in os.listdir(file_path):
         output.write(strargs)
         output.write(',')
 
-    os.system(poppercommand + " " + f +"/100 " + strargs + " " + outputfile)
+    if percent == True:
+        for x in num_lines[0]:
+            if foldername in x:
+                index = num_lines[0].index(x)
+                os.system(poppercommand + " " + f +"/100 " + strargs + ' ' + num_lines[1][index] + " " + outputfile)
     #os.system(poppercommand + " " + f + " " + outputfile)
+    else:
+        os.system(poppercommand + " " + f +"/100 " + strargs + " " + outputfile)
+
 
     end = time.time()
     timeTaken = round(end-start, 2)
@@ -63,7 +98,7 @@ for foldername in os.listdir(file_path):
     with open("output.txt", "r") as f:
         lines = f.readlines()
 
-    lines[x] = lines[x].strip('\n') + ',' + str(timeTaken) + '\n'
+    lines[currentLine] = lines[currentLine].strip('\n') + ',' + str(timeTaken) + '\n'
     with open("output.txt", "w") as f:
         f.writelines(lines)
 
