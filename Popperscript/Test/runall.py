@@ -32,6 +32,7 @@ directories = []
 num_lines = [[],[]]
 
 percent = False
+percent_amount = 1
 
 def func(percent):
     os.walk(file_path)
@@ -47,6 +48,7 @@ def func(percent):
 
 for x in args:
     if x == '--percent':
+        percent_amount = args[1]
         func(args[1])
         args.pop(0)
         args.pop(0)
@@ -78,7 +80,10 @@ for foldername in os.listdir(file_path):
         output.write(',')
         output.write(foldername)
         output.write(',')
-        output.write(strargs)
+        if percent == True:
+            output.write(strargs + ' ' + percent_amount)
+        if percent == False:
+            output.write(strargs)
         output.write(',')
 
     if percent == True:
