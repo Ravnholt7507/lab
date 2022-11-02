@@ -1,27 +1,22 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
+from collections import defaultdict
 
 import options
 import sys
 
 from .priority_queue import HardRulesQueue
+from .rule_evaluator import RuleEval
 
-class HardRulesEvaluator():
+
+class HardRulesEvaluator:
     def __init__(self, rules):
         self.rules = {}
+        print(rules)
         for rule in rules:
-            head, tail = rule.split(":-", 1)
-            head = head.strip()
-            tail = tail.strip()
-            head_schema = head[0:head.index("(")].strip()
-            tail_schema = tail[0:tail.index("(")].strip()
-            head_args = [x.strip() for x in head[head.index("(")+1:-1].split(",")]
-            tail_args = [x.strip() for x in tail[tail.index("(")+1:-1].split(",")]
-            if (not tail_schema in self.rules):
-                self.rules[tail_schema] = {}
-            if (not head_schema in self.rules[tail_schema]):
-                self.rules[tail_schema][head_schema] = []
-            self.rules[tail_schema][head_schema].append([tail_args.index(arg) if (arg != "_" and arg != "*") else -1 for arg in head_args])
+            print(rule)
+            evaluator = RuleEval(rule, task)
+            self.rules[evaluator.action_schema].append(evaluator)
         
 
 class HardRulesMatchTree(HardRulesEvaluator):

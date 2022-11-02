@@ -133,11 +133,9 @@ def get_free_variable_domains (constraints):
     return free_variable_domains
 
 
-        
-
 class RuleEval:
     def __init__(self, rule_text, task):
-        #print("Loading: " + rule_text)
+        print("Loading: " + rule_text)
         self.text = rule_text.replace('\n','')
         head, body = rule_text.split(":-")
         self.action_schema, action_arguments = head.split(" (")
