@@ -2,7 +2,8 @@
 #define OPTIONS_TOKEN_PARSER_H
 
 #include "predefinitions.h"
-
+#include <stdexcept>
+#include <limits>
 #include <sstream>
 
 class Evaluator;
