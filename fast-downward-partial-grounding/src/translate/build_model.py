@@ -287,7 +287,7 @@ class Queue:
                          for atom in self.queue}
         self.num_pushes = len(atoms)
         if options.hard_rules:
-            self.action_queue = hr.get_hard_rules_from_options(pq.get_action_queue_from_options(task))
+            self.action_queue = hr.get_hard_rules_from_options(pq.get_action_queue_from_options(task), task)
         else:
             self.action_queue = pq.get_action_queue_from_options(task)
         self.popped_actions = 0

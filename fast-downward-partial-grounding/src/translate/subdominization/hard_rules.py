@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
+
 from collections import defaultdict
 
 import options
@@ -8,20 +9,19 @@ import sys
 from .priority_queue import HardRulesQueue
 from .rule_evaluator import RuleEval
 
-
 class HardRulesEvaluator:
-    def __init__(self, rules):
+    def __init__(self, rules, task):
         self.rules = {}
-        print(rules)
         for rule in rules:
             print(rule)
+            print(task.init)
             evaluator = RuleEval(rule, task)
             self.rules[evaluator.action_schema].append(evaluator)
         
 
 class HardRulesMatchTree(HardRulesEvaluator):
-    def __init__(self, rules):
-        super(HardRulesMatchTree, self).__init__(rules)
+    def __init__(self, rules, task):
+        super(HardRulesMatchTree, self).__init__(rules, task)
         self.match_tree = {}
         for schema in self.rules:
             for target_schema in self.rules[schema]:
@@ -75,8 +75,8 @@ class HardRulesMatchTree(HardRulesEvaluator):
         return []
                 
 class HardRulesHashSet(HardRulesEvaluator):
-    def __init__(self, rules):
-        super(HardRulesHashSet, self).__init__(rules)
+    def __init__(self, rules, task):
+        super(HardRulesHashSet, self).__init__(rules, task)
         self.hard_actions = {}
         for entry in self.rules.values():
             for target_schema in entry:
@@ -105,7 +105,7 @@ class HardRulesHashSet(HardRulesEvaluator):
         return []
 
 
-def get_hard_rules_from_options(inner_queue):
+def get_hard_rules_from_options(inner_queue, task):
     args = options.hard_rules
     
     type = args[0].lower()
@@ -114,9 +114,9 @@ def get_hard_rules_from_options(inner_queue):
     rules = [x.strip() for x in rules] 
  
     if (type == "hashset"):
-        evaluator = HardRulesHashSet(rules)
+        evaluator = HardRulesHashSet(rules, task)
     elif (type == "matchtree"):
-        evaluator = HardRulesMatchTree(rules)
+        evaluator = HardRulesMatchTree(rules, task)
     else:
         sys.exit("Error: unknown hard-rule queue type: " + type)
         

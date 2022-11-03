@@ -131,7 +131,7 @@ def format_prog(prog):
     return '\n'.join(format_rule(order_rule(rule)) for rule in prog)
 
 def format_literal(literal):
-    args = ','.join(literal.arguments)
+    args = ';'.join(literal.arguments)
     return f'{literal.predicate}({args})'
 
 def format_rule(rule):
@@ -139,7 +139,7 @@ def format_rule(rule):
     head_str = ''
     if head:
         head_str = format_literal(head)
-    body_str = ','.join(format_literal(literal) for literal in body)
+    body_str = ';'.join(format_literal(literal) for literal in body)
     return f'{head_str}:- {body_str}.'
 
 def print_prog_score(prog, score):

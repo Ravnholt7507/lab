@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e98711e-ca6d-4706-a425-4beb5dcf3f03" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Popperscript/popper-output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Popperscript/popper-output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast-downward-partial-grounding/build_configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/fast-downward-partial-grounding/build_configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast-downward-partial-grounding/driver/arguments.py" beforeDir="false" afterPath="$PROJECT_DIR$/fast-downward-partial-grounding/driver/arguments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast-downward-partial-grounding/src/cmake_modules/FastDownwardMacros.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/fast-downward-partial-grounding/src/cmake_modules/FastDownwardMacros.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Popperscript/popper/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/Popperscript/popper/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast-downward-partial-grounding/src/translate/build_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/fast-downward-partial-grounding/src/translate/build_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fast-downward-partial-grounding/src/translate/subdominization/hard_rules.py" beforeDir="false" afterPath="$PROJECT_DIR$/fast-downward-partial-grounding/src/translate/subdominization/hard_rules.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fast-downward-partial-grounding/src/translate/subdominization/rule_evaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/fast-downward-partial-grounding/src/translate/subdominization/rule_evaluator.py" afterDir="false" />
     </list>
@@ -91,7 +89,7 @@
       <workItem from="1667298637787" duration="24000" />
       <workItem from="1667298665439" duration="121000" />
       <workItem from="1667298791006" duration="1715000" />
-      <workItem from="1667379655865" duration="5790000" />
+      <workItem from="1667379655865" duration="9254000" />
     </task>
     <servers />
   </component>
@@ -128,7 +126,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/P5_projekt$test.coverage" NAME="test Coverage Results" MODIFIED="1667392441373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fast-downward-partial-grounding" />
+    <SUITE FILE_PATH="coverage/P5_projekt$test.coverage" NAME="test Coverage Results" MODIFIED="1667463949193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fast-downward-partial-grounding" />
     <SUITE FILE_PATH="coverage/P5_projekt$fast_downward.coverage" NAME="fast-downward Coverage Results" MODIFIED="1666941781634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fast-downward-partial-grounding" />
     <SUITE FILE_PATH="coverage/P5_projekt$main.coverage" NAME="main Coverage Results" MODIFIED="1666941747730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fast-downward-partial-grounding/driver" />
   </component>

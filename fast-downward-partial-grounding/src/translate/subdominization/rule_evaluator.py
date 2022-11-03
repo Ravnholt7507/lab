@@ -138,7 +138,7 @@ class RuleEval:
         print("Loading: " + rule_text)
         self.text = rule_text.replace('\n','')
         head, body = rule_text.split(":-")
-        self.action_schema, action_arguments = head.split(" (")
+        self.action_schema, action_arguments = head.split("(")
         self.constraints = []
         
         action_arguments = action_arguments.replace(")", "").replace("\n", "").replace(".", "").replace(" ", "").split(",")
