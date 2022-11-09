@@ -9,15 +9,16 @@ import sys
 from .priority_queue import HardRulesQueue
 from .rule_evaluator import RuleEval
 
+
 class HardRulesEvaluator:
     def __init__(self, rules, task):
-        self.rules = {}
+        self.rules = defaultdict(list)
         for rule in rules:
             print(rule)
             print(task.init)
             evaluator = RuleEval(rule, task)
             self.rules[evaluator.action_schema].append(evaluator)
-        
+
 
 class HardRulesMatchTree(HardRulesEvaluator):
     def __init__(self, rules, task):
@@ -77,31 +78,16 @@ class HardRulesMatchTree(HardRulesEvaluator):
 class HardRulesHashSet(HardRulesEvaluator):
     def __init__(self, rules, task):
         super(HardRulesHashSet, self).__init__(rules, task)
-        self.hard_actions = {}
-        for entry in self.rules.values():
-            for target_schema in entry:
-                self.hard_actions[target_schema] = set()
-                for index in entry[target_schema]:
-                    if (index == -1): # -1 is wild card
-                        sys.exit("ERROR: wild cards not allowed in hashset hard-rule evaluator, use matchtree instead.")        
+
     def print_info(self):
         print("Hashset hard rules evaluator.")
+
     def is_hard_action(self, action):
-        if (action.predicate.name in self.hard_actions):
-            return "".join(action.args) in self.hard_actions[action.predicate.name]
-        return False
-    def notify_action(self, action):
         if (action.predicate.name in self.rules):
-            added = set()
-            for target_schema in self.rules[action.predicate.name]:
-                for arg_ids in self.rules[action.predicate.name][target_schema]:
-                    args = ""
-                    for id in arg_ids:
-                        args += action.args[id]
-                    if (not args in self.hard_actions[target_schema]):
-                        self.hard_actions[target_schema].add(args)
-                        added.add(target_schema)
-            return added
+            return "".join(action.args) in self.rules[action.predicate.name]
+        return False
+
+    def notify_action(self, action):
         return []
 
 

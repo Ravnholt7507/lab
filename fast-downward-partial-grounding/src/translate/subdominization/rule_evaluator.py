@@ -148,7 +148,9 @@ class RuleEval:
             rule_type = rule_type.strip()
 
             if rule_type == "ini":
-                arguments, compliant_values = evaluate_inigoal_rule (rule, task.init)                        
+                arguments, compliant_values = evaluate_inigoal_rule (rule, task.init)
+            elif rule_type == "init":
+                arguments, compliant_values = evaluate_inigoal_rule(rule, task.init)
             elif rule_type == "goal":
                 arguments, compliant_values = evaluate_inigoal_rule (rule, task.goal.parts)                
             elif rule_type == "equal":
