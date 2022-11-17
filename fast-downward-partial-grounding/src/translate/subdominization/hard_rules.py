@@ -84,11 +84,9 @@ class HardRulesHashSet(HardRulesEvaluator):
 
     def is_hard_action(self, action):
         if (action.predicate.name in self.rules):
-            i = 0
-            while i < len(self.rules[action.predicate.name]):
-                if self.rules[action.predicate.name][i].evaluate(action):
+            for item in self.rules[action.predicate.name]:
+                if item.evaluate(action) == 1:
                     return 1
-                i += 1
         return False
 
     def notify_action(self, action):
