@@ -34,7 +34,7 @@ else:
     print("Error: Please select a folder")
 
 # format popper-output.txt in order to fit fast-downward
-get_head = []
+
 with open("popper-output.txt", "r") as file :
     file_data = file.read()
 file_data = file_data.replace("),", ");")
@@ -48,11 +48,29 @@ for line in file_data.split("\n"):
 file_data = new_file_data
 
 i = 0
+j = 0
+head = []
+
 while i < len(file_data):
-    get_head.append(file_data[i])
-    if get_head.__contains__(")"):
+    head.append(file_data[i])
+    if head.__contains__(")"):
         break
     i += 1
+
+variables = []
+for char in head:
+    if char.isupper():
+        variables.append(char)
+
+tmp_print = file_data.split(".")
+print_to_file = []
+
+for line in tmp_print:
+    for char in line:
+        if char.isupper() and not variables.__contains__(char) and line.count(char) == 1:
+            line = line.replace(char, "_")
+
+    print_to_file.append(line)
 
 # change variables from A to ?A as that is what our planner expects in order to identify variables
 refactor_variables = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
@@ -61,15 +79,10 @@ replaces = ["?A", "?B", "?C", "?D", "?E", "?F", "?G", "?H", "?I", "?J", "?K", "?
             "?S", "?T", "?V", "?W", "?Y", "?Q", "?Z", "?X"]
 
 i = 0
-for letter in refactor_variables:
-    file_data = file_data.replace(letter, replaces[i])
+while i < len(refactor_variables):
+    print_to_file = [line.replace(refactor_variables[i], replaces[i]) for line in print_to_file]
     i += 1
 
-variables = []
-for char in get_head:
-    if char.isupper():
-        variables.append(char)
-
-
 with open("popper-output.txt", "w") as file:
-    file.write(file_data)
+    for line in print_to_file:
+        file.write(line)
