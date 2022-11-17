@@ -30,13 +30,33 @@ if (int(TrainSet) + int(TestSet)) == 100:
 			LinesinFile = fr.readlines()
 			TrainSet = len(LinesinFile) * int(TrainSet)/100
 			TrainSet = math.ceil(TrainSet)
+			LineofProblem = TrainSet-1
 		
+		ExProblem = LinesinFile[LineofProblem].split(",")
+		ExProblem = ExProblem[-1].replace(")).", "")
+		EndProblem = LinesinFile[-1].split(",")
+		EndProblem = EndProblem[-1].replace(")).", "")
+		x = ExProblem
+		
+		if ExProblem == EndProblem:
+			while x == ExProblem:
+				x = LinesinFile[LineofProblem].split(",")
+				x = x[-1].replace(")).", "")
+				LineofProblem -= 1
+			LineofProblem += 2
+		else:	
+			while x == ExProblem:
+				x = LinesinFile[LineofProblem].split(",")
+				x = x[-1].replace(")).", "")
+				LineofProblem += 1
+			LineofProblem -= 1
+		 
 		#Train mappe
 		with open(Traindst + "/exs.pl", "w") as fw:
-			fw.writelines(LinesinFile[:TrainSet])
+			fw.writelines(LinesinFile[:LineofProblem])
 		
 		#Test mappe
 		with open(Testdst + "/exs.pl", "w") as fw:
-			fw.writelines(LinesinFile[TrainSet:])
+			fw.writelines(LinesinFile[LineofProblem:])
 else:
 	print("Dats the wrong number, Monogl")
