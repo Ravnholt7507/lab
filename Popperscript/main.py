@@ -10,6 +10,7 @@ file_path = askdirectory(title="select folder")
 poppercommand = "python3 popper.py"
 outputFile = ">> popper-output.txt"
 
+
 f = open("popper-output.txt", "w")
 f.write("")
 f.close()

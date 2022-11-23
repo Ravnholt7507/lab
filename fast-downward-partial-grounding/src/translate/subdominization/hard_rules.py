@@ -14,8 +14,6 @@ class HardRulesEvaluator:
     def __init__(self, rules, task):
         self.rules = defaultdict(list)
         for rule in rules:
-            print(rule)
-            print(task.init)
             evaluator = RuleEval(rule, task)
             self.rules[evaluator.action_schema].append(evaluator)
 
