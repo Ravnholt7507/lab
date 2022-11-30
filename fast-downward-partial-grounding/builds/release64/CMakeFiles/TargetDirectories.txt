@@ -1,0 +1,6 @@
+/Users/andreasravnholt/Universitet/5semester/P5-projekt/fast-downward-partial-grounding/builds/release64/CMakeFiles/translate.dir
+/Users/andreasravnholt/Universitet/5semester/P5-projekt/fast-downward-partial-grounding/builds/release64/CMakeFiles/edit_cache.dir
+/Users/andreasravnholt/Universitet/5semester/P5-projekt/fast-downward-partial-grounding/builds/release64/CMakeFiles/rebuild_cache.dir
+/Users/andreasravnholt/Universitet/5semester/P5-projekt/fast-downward-partial-grounding/builds/release64/search/CMakeFiles/downward.dir
+/Users/andreasravnholt/Universitet/5semester/P5-projekt/fast-downward-partial-grounding/builds/release64/search/CMakeFiles/edit_cache.dir
+/Users/andreasravnholt/Universitet/5semester/P5-projekt/fast-downward-partial-grounding/builds/release64/search/CMakeFiles/rebuild_cache.dir

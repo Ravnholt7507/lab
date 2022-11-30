@@ -1,0 +1,1 @@
+../../../../../../planners/downward-projects/benchmarks/depot/p10.pddl

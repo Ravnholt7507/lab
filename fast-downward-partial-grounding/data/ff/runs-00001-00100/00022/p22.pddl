@@ -1,0 +1,1 @@
+../../../../../../planners/downward-projects/benchmarks/depot/p22.pddl

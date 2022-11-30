@@ -1,0 +1,354 @@
+{
+  "ff-depot-p01.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p01.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p01.pddl",
+    "run_dir": "runs-00001-00100/00001",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p02.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p02.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p02.pddl",
+    "run_dir": "runs-00001-00100/00002",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p03.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p03.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p03.pddl",
+    "run_dir": "runs-00001-00100/00003",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p04.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p04.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p04.pddl",
+    "run_dir": "runs-00001-00100/00004",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p05.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p05.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p05.pddl",
+    "run_dir": "runs-00001-00100/00005",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p06.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p06.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p06.pddl",
+    "run_dir": "runs-00001-00100/00006",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p07.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p07.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p07.pddl",
+    "run_dir": "runs-00001-00100/00007",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p08.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p08.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p08.pddl",
+    "run_dir": "runs-00001-00100/00008",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p09.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p09.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p09.pddl",
+    "run_dir": "runs-00001-00100/00009",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p10.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p10.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p10.pddl",
+    "run_dir": "runs-00001-00100/00010",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p11.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p11.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p11.pddl",
+    "run_dir": "runs-00001-00100/00011",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p12.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p12.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p12.pddl",
+    "run_dir": "runs-00001-00100/00012",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p13.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p13.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p13.pddl",
+    "run_dir": "runs-00001-00100/00013",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p14.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p14.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p14.pddl",
+    "run_dir": "runs-00001-00100/00014",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p15.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p15.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p15.pddl",
+    "run_dir": "runs-00001-00100/00015",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p16.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p16.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p16.pddl",
+    "run_dir": "runs-00001-00100/00016",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p17.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p17.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p17.pddl",
+    "run_dir": "runs-00001-00100/00017",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p18.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p18.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p18.pddl",
+    "run_dir": "runs-00001-00100/00018",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p19.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p19.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p19.pddl",
+    "run_dir": "runs-00001-00100/00019",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p20.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p20.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p20.pddl",
+    "run_dir": "runs-00001-00100/00020",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p21.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p21.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p21.pddl",
+    "run_dir": "runs-00001-00100/00021",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  },
+  "ff-depot-p22.pddl": {
+    "algorithm": "ff",
+    "domain": "depot",
+    "id": [
+      "ff",
+      "depot",
+      "p22.pddl"
+    ],
+    "memory_limit": 2048,
+    "problem": "p22.pddl",
+    "run_dir": "runs-00001-00100/00022",
+    "time_limit": 1800,
+    "unexplained_errors": [
+      "driver.err: Error: Call run-planner failed. \"--translate-options\" not found.\n"
+    ]
+  }
+}
