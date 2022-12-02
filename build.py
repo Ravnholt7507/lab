@@ -1,4 +1,4 @@
-#!/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man/man1 python.1
+#!/Library/Frameworks/Python.framework/Versions/3.8 Python
 
 import errno
 import glob
