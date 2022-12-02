@@ -32,8 +32,7 @@ exp.add_algorithm(
     "blind",
     REPO,
     REV,
-    ["--translate-options", "--grounding-action-queue-ordering", "fifo", "--hard-rules", "hashset",
-     "/Users/andreasravnholt/Universitet/5semester/P5-projekt/Popperscript/popper-output.txt",
+    ["--translate-options", "--grounding-action-queue-ordering", "fifo",
      "--termination-condition", "goal-relaxed-reachable", "min-number", "745", "--search-options", "--search",
      "eager_greedy([ff])"],
 )
@@ -48,7 +47,7 @@ for task in suites.build_suite(BENCHMARKS_DIR, SUITES):
     run.set_property("memory_limit", MEMORY_LIMIT)
     run.set_property("id", ["ff", task.domain, task.problem])
 
-exp.add_step("build", exp.build)
+exp.add_step("python 3build", exp.build)
 exp.add_step("start", exp.start_runs)
 exp.add_fetcher(name="fetch")
 exp.add_report(MyReport(attributes=ATTRIBUTES), outfile="report.html")

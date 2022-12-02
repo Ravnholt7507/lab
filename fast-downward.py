@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man/man1 python.1
 # -*- coding: utf-8 -*-
 
 if __name__ == "__main__":
