@@ -1,0 +1,13 @@
+{
+  "algorithm": "ff",
+  "domain": "depot",
+  "id": [
+    "ff",
+    "depot",
+    "p11.pddl"
+  ],
+  "memory_limit": 2048,
+  "problem": "p11.pddl",
+  "run_dir": "runs-00001-00100/00011",
+  "time_limit": 1800
+}
