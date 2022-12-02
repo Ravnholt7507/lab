@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man/man1 python.1
 
 import errno
 import glob
