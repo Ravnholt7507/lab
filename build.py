@@ -15,9 +15,7 @@ for config_file in sorted(glob.glob(os.path.join(script_dir, "*build_configs.py"
         exec(config_file_content, globals(), CONFIGS)
 
 DEFAULT_CONFIG_NAME = CONFIGS.pop("DEFAULT")
-DEBUG_CONFIG_NAME = CONFIGS.pop("DEBUG")
-
-CMAKE = "cmake"
+DEBUG_CONFIG_NAME = CONFIGS.pop
 DEFAULT_MAKE_PARAMETERS = []
 if os.name == "posix":
     MAKE = "make"
