@@ -1,4 +1,4 @@
-#!/Library/Frameworks/Python.framework/Versions/3.8 Python
+#!/usr/bin python3.10
 
 import errno
 import glob
