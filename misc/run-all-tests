@@ -8,7 +8,7 @@ cd ..
 ./misc/style/run-all-style-checks.py
 
 set -x
-./build.py
-./build.py --debug
+python3 ./build.py
+python3 ./build.py --debug
 
 ./misc/tests/run-all-code-tests
