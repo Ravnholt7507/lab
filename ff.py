@@ -47,7 +47,7 @@ for task in suites.build_suite(BENCHMARKS_DIR, SUITES):
     run.set_property("memory_limit", MEMORY_LIMIT)
     run.set_property("id", ["ff", task.domain, task.problem])
 
-exp.add_step("python3 build", exp.build)
+exp.add_step("build", exp.build)
 exp.add_step("start", exp.start_runs)
 exp.add_fetcher(name="fetch")
 exp.add_report(MyReport(attributes=ATTRIBUTES), outfile="report.html")
