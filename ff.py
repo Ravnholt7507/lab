@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin python3
 import os
 import platform
 
@@ -8,6 +8,8 @@ from downward.reports.absolute import AbsoluteReport
 from lab.environments import LocalEnvironment, BaselSlurmEnvironment
 from lab.experiment import Experiment
 from lab.reports import Attribute, geometric_mean
+import shutil
+
 
 # Create custom report class with new attributes.
 class MyReport(AbsoluteReport):
@@ -19,6 +21,7 @@ BENCHMARKS_DIR = "/Users/andreasravnholt/Universitet/5semester/planners/downward
 REPO = "/Users/andreasravnholt/Universitet/5semester/lab"
 REV = "main"
 ENV = LocalEnvironment(processes=2)
+
 SUITES = ["depot"]
 ATTRIBUTES = ["error", "plan", "times", Attribute("coverage", absolute=True, min_wins=False, scale="linear")]
 TIME_LIMIT = 1800
