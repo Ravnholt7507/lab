@@ -17,7 +17,8 @@ class MyReport(AbsoluteReport):
     ERROR_ATTRIBUTES = ["domain", "problem", "algorithm", "unexplained_errors", "error", "node"]
 
 NODE = platform.node()
-BENCHMARKS_DIR = "/Users/andreasravnholt/Universitet/5semester/planners/downward-projects/benchmarks"
+#BENCHMARKS_DIR = "/Users/andreasravnholt/Universitet/5semester/planners/downward-projects/benchmarks"
+BENCHMARKS_DIR = "/Users/andreasravnholt/Universitet/5semester/planners/usefull/depots/runs/optimal"
 REPO = "/Users/andreasravnholt/Universitet/5semester/lab"
 REV = "main"
 ENV = LocalEnvironment(processes=2)
